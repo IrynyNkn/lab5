@@ -1,0 +1,23 @@
+body {
+    font-size: 16px;
+}
+li {
+    font-size: 2rem;
+    width: 300px;
+    margin: 4px;
+    padding: 4px;
+    list-style: none
+}
+.midlaner {background-color: #eeeeee}
+.toplaner {background-color: #ffea00}
+.nav-item {
+    font-size: 16px !important;
+    width: fit-content;
+}
+.main-container {
+    /*padding-top: 60px;*/
+}
+.main-page-card {
+    margin-top: 40px;
+    max-width: 1200px;
+}

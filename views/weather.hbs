@@ -1,0 +1,52 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="list-group">
+                <a href="http://localhost:3000/weather/Kyiv" class="list-group-item list-group-item-action {{#isActive activeTab 'kyiv'}}{{/isActive}}">
+                    Kyiv
+                </a>
+                <a href="http://localhost:3000/weather/Korosten" class="list-group-item list-group-item-action {{#isActive activeTab 'korosten'}}{{/isActive}}">Korosten</a>
+                <a href="http://localhost:3000/weather/Zhytomyr" class="list-group-item list-group-item-action {{#isActive activeTab 'zhytomyr'}}{{/isActive}}">Zhytomyr</a>
+                <a href="http://localhost:3000/weather/Lviv" class="list-group-item list-group-item-action {{#isActive activeTab 'lviv'}}{{/isActive}}">Lviv</a>
+                <a href="http://localhost:3000/weather/Ternopil" class="list-group-item list-group-item-action {{#isActive activeTab 'ternopil'}}{{/isActive}}" tabindex="-1" aria-disabled="true">Ternopil</a>
+            </div>
+        </div>
+        <div class="col-8 card d-flex flex-column align-items-center">
+            {{#check weather.city undefined}}
+                {{this}}
+            {{/check}}
+            {{#if weather.city}}
+                <h2 class="mt-2 mb-4">Weather in {{weather.city}}</h2>
+                <img class="mb-4" src="/thermometer-sun.svg" alt="weather" width="100">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Weather</th>
+                            <td>{{weather.weather}}</td>
+                        </tr>
+                        <tr>
+                            <th>Descritpion</th>
+                            <td>{{weather.description}}</td>
+                        </tr>
+                        <tr>
+                            <th>Temperature</th>
+                            <td>{{weather.temp}}</td>
+                        </tr>
+                        <tr>
+                            <th>Temperature Fills Like</th>
+                            <td>{{weather.feels_like}}</td>
+                        </tr>
+                        <tr>
+                            <th>Humidity</th>
+                            <td>{{weather.humidity}}</td>
+                        </tr>
+                        <tr>
+                            <th>Pressure</th>
+                            <td>{{weather.pressure}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {{/if}}
+        </div>
+    </div>
+</div>
